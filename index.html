@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Metropolitan Museum of Art</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="bg-image"></div>
+    <div id="loading"><i class="fas fa-circle-notch fa-spin"></i></div>
+
+    <form id="search-bar-container" action="" autocomplete="off">
+        <div id="page-title">
+            <h1>The Metropolitan Museum of Art</h1>
+            <p>This web page provides a user-friendly interface to interact with <a class="link"
+                    href="https://metmuseum.github.io/">the Metropolitan Museum of Art Collection API</a> (<a
+                    class="link" href="https://github.com/metmuseum/openaccess">the CSV file</a> is also published on <a
+                    class="link" href="https://github.com">GitHub</a>).</p>
+            <p><b>Note:</b> This website will only search through artworks that have an available image under <a class="link"
+                    href="https://www.metmuseum.org/information/terms-and-conditions">Open Access</a>. You
+                might not be able to find some of the strictly copyrighted works using this web page.</p>
+        </div>
+        <div id="search-bar-components">
+            <input autocomplete="off" list="results" type="search" placeholder="Search for " id="search-bar"
+                name="search-bar">
+            <!-- <datalist id="results"></datalist> -->
+            <button id="search-btn" type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="results"></div>
+        <p id="no-results">No results found.</p>
+    </form>
+
+    <div id="result">
+        <div id="result-image"></div>
+        <div id="result-description">
+            <div id="title-artist">
+                <a id="title" class="link" target="_blank"
+                    href="https://www.metmuseum.org/art/collection/search/436483"></a>
+                <div>by <a id="artist" class="link" target="_blank" href="https://www.wikidata.org/wiki/Q2758548"></a>,
+                    <span id="date"></span>&nbsp;&nbsp;<i
+                        tooltip="The artist and the time when the artwork was designed or created."
+                        class="tooltip far fa-question-circle"></i>
+                </div>
+            </div>
+            <div><b>Artist's Biography:</b> <span id="artist-bio"></span>&nbsp;&nbsp;<i
+                    tooltip="Nationality and life dates of the artist, also includes birth and death city when known."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Department:</b> <span id="department"></span>&nbsp;&nbsp;<i
+                    tooltip="Indicates the Metropolitan Museum of Art's curatorial department responsible for the artwork."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Culture:</b> <span id="culture"></span>&nbsp;&nbsp;<i
+                    tooltip="Information about the culture, or people from which the object was created."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Classification:</b> <span id="classification"></span>&nbsp;&nbsp;<i
+                    tooltip="General term describing the artwork type." class="tooltip far fa-question-circle"></i>
+            </div>
+
+            <div><b>Medium:</b> <span id="medium"></span>&nbsp;&nbsp;<i
+                    tooltip="The materials that were used to create the artwork."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Dimensions:</b> <span id="dimensions"></span>&nbsp;&nbsp;<i tooltip="Size of the artwork or object."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Credit:</b> <span id="credit"></span>&nbsp;&nbsp;<i
+                    tooltip="Acknowledging the source or origin of the artwork and the year the object was acquired by the museum."
+                    class="tooltip far fa-question-circle"></i></div>
+
+            <div><b>Tags:</b> <span id="tags"></span>&nbsp;&nbsp;<i
+                    tooltip="A list of subject keyword tags associated with the object linked to their respective AAT URL."
+                    class="tooltip far fa-question-circle"></i></div>
+            <small id="art-copyright"></small>
+        </div>
+    </div>
+
+    <footer>
+        <!-- <div id="copyright"><small>Copyright &copy; 2021 The Metropolitan Museum of Art. All Rights Reserved</small> -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
